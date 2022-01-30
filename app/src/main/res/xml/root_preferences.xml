@@ -1,0 +1,17 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/messages_header">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="Linea"
+            android:title="@string/texto_switch" />
+        <ListPreference
+            android:defaultValue="Listado"
+            android:entries="@array/tipos_visualizacion"
+            android:entryValues="@array/valores_visualizacion"
+            android:key="tipo_visualizacion"
+            android:title="@string/texto_listado" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/paisesFragment">
+    <fragment
+        android:id="@+id/paisesFragment"
+        android:name="com.dvj.paises.PaisesFragment"
+        android:label="@string/selecciona_pais"
+        tools:layout="@layout/fragment_paises_list" >
+        <action
+            android:id="@+id/action_paisesFragment_to_detallesPaisFragment"
+            app:destination="@id/detallesPaisFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallesPaisFragment"
+        android:name="com.dvj.paises.DetallesPaisFragment"
+        android:label="{tittle}"
+        tools:layout="@layout/fragment_detalles_pais">
+        <argument
+            android:name="tittle"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/acercaDeFragment"
+        android:name="com.dvj.paises.AcercaDeFragment"
+        android:label="@string/acerca_de"
+        tools:layout="@layout/fragment_acerca_de" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.dvj.paises.SettingsFragment"
+        android:label="Configuración" />
+    <fragment
+        android:id="@+id/juegoBanderasFragment"
+        android:name="com.dvj.paises.JuegoBanderasFragment"
+        android:label="@string/Juego"
+        tools:layout="@layout/fragment_juego_banderas" />
+</navigation>
